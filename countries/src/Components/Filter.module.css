@@ -1,0 +1,76 @@
+.filterContainer {
+  background: rgba(0, 77, 77, 0.8);
+  border: 1px solid #00cccc;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.filterWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filterLabel {
+  color: #00e6e6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filterInput {
+  flex: 1;
+  background: rgba(0, 51, 51, 0.6);
+  border: 1px solid #00cccc;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  color: #e0f2f2;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);
+}
+
+.filterInput::placeholder {
+  color: #80cccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filterContainer {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 640px) {
+  .filterContainer {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .filterWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filterInput {
+    width: 100%;
+  }
+}

@@ -1,0 +1,114 @@
+.detailsSection {
+  background: rgba(0, 77, 77, 0.8);
+  border: 1px solid #00cccc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.detailCard {
+  background: rgba(0, 51, 51, 0.6);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 204, 204, 0.3);
+}
+
+.detailTitle {
+  color: #00ffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detailContent {
+  color: #e0f2f2;
+}
+
+.nativeNamesList {
+  list-style: none;
+  padding: 0;
+}
+
+.nativeNameItem {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 204, 204, 0.2);
+}
+
+.nativeNameItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.labelText {
+  color: #80cccc;
+  font-size: 0.9rem;
+}
+
+.coatOfArms {
+  max-width: 200px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+.bordersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.borderTag {
+  background: rgba(0, 204, 204, 0.2);
+  color: #e0f2f2;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 204, 204, 0.3);
+}
+
+.mapLink {
+  color: #00ffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.mapLink:hover {
+  color: #00cccc;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 204, 204, 0.2);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
