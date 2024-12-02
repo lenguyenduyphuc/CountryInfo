@@ -1,4 +1,3 @@
-```markdown
 # Country Info
 
 A modern web application that provides detailed information about countries worldwide, including their national symbols and real-time weather data.
