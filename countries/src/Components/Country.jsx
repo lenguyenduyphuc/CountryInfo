@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './Country.module.css';
 import detailStyles from './CountryDetails.module.css';
-import { Globe, MapPin, Calendar, Phone } from 'lucide-react';
+import { Globe, MapPin, Phone } from 'lucide-react';
 
 const Country = ({ country }) => {
   const [weather, setWeather] = useState(null);

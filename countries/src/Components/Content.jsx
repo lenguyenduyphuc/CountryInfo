@@ -1,4 +1,3 @@
-import React from 'react'
 import Country from './Country'
 import styles from './Content.module.css'
 
