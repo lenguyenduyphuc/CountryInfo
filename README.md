@@ -61,4 +61,3 @@ MIT
 
 ## Author
 Le Nguyen Duy Phuc
-```
