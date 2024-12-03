@@ -49,9 +49,6 @@ VITE_API_KEY=[Your OpenWeather API Key]
 npm run dev
 ```
 
-## Screenshots
-[Add screenshots of your application]
-
 ## API Credits
 - Weather data: [OpenWeather API](https://openweathermap.org/api)
 - Country data: [REST Countries API](https://restcountries.com/)
