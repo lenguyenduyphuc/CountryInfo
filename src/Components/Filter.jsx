@@ -1,6 +1,8 @@
 import styles from './Filter.module.css';
+import { useField } from '../hooks';
 
 const Filter = ({ value, onChange }) => {
+  const nameInput = useField('text')
   return (
     <div className={styles.filterContainer}>
       <div className={styles.filterWrapper}>
@@ -9,13 +11,13 @@ const Filter = ({ value, onChange }) => {
         </label>
         <input
           id="country-search"
-          type="text"
+          autoFocus
+          {...nameInput}
           value={value}
           onChange={onChange}
           className={styles.filterInput}
           placeholder="Type to search..."
           autoComplete="off"
-          spellCheck="false"
         />
       </div>
     </div>

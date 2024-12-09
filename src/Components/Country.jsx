@@ -1,33 +1,10 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import styles from './Country.module.css';
 import detailStyles from './CountryDetails.module.css';
 import { Globe, MapPin, Phone } from 'lucide-react';
+import { useWeather } from '../hooks';
 
 const Country = ({ country }) => {
-  const [weather, setWeather] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const [lat, lon] = country.capitalInfo.latlng;
-
-    axios
-      .get('https://api.openweathermap.org/data/2.5/weather', {
-        params: {
-          lat: lat,
-          lon: lon,
-          appid: import.meta.env.VITE_API_KEY,
-          units: 'metric',
-        },
-      })
-      .then((response) => {
-        setWeather(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching weather data:', error);
-        setError('Failed to fetch weather data.');
-      });
-  }, [country.capitalInfo, import.meta.env.VITE_API_KEY]);
+  const { weather, error } = useWeather(country)
 
   const renderNativeNames = () => {
     return Object.entries(country.name.nativeName || {}).map(([lang, name]) => (
